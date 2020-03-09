@@ -1,0 +1,59 @@
+*{
+    margin :0 ;
+    padding :10px;
+    border :1px solid rgb(0, 0, 0);
+    /* importante . para q se mantenga el tamañan de la caja */
+    box-sizing: border-box;
+}
+.block{
+    display:block;
+    width:300px;
+    background-color:rgb(189, 126, 231);
+}
+.inlineblock{
+    width:200px;
+    height :100px;
+    background-color :rgb(212, 94, 177);
+    display:inline-block;  
+}
+.Caja1, .Caja2, .Caja3, .Caja4 , .Caja5{
+    width:200px;
+    height :200px;
+    background-color:#d55dfa;
+    float:left;
+}
+.Reparar{
+    clear:both
+}
+.Caja2{
+    /* relariva a si mismo , donde deberia ubicarse*/
+    /* 1. Me esta repsetando la estructura HTML y sus hermannitos también
+    2. Se mueve a paartir de su posicion relativa */
+    position:relative;
+    top :15px;
+    left:15px, 
+}
+.Caja4{
+    /* es como si yo renoviera ese elemento del HTML
+    2.Se va a colocar referente al ultimo ancestro que tenga una posicion definida */
+    position :absolute;
+    top:25px;
+    left:25px;
+    background-color :skyblue;
+}
+.padre{
+    position:relative;
+}
+/* z.index e coprota como si fueran capas u hojas , tiene que tener position relativo o absolute */
+.Caja1{
+    z-index:3;
+}
+.publicidad{
+    border :2px dashed yellow;
+    background-color :greenyellow;
+    /* posiciona mi elemento pero a partir de la ventana del navegador */
+    position:fixed;
+    right :50px;
+    bottom : 50px;
+
+}
